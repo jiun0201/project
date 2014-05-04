@@ -7,26 +7,26 @@ tags: blog, d3, R
 <section>
 	<section>
 
-* Tools: d3, R
+* Tools used: d3, R
 * Theme: Visualizing Time-series data
 
 ## World's Top Five Countries by CO2 emissions ##
 
 ### 1. Graph Critiques: ###
 
-[This](http://blogs.shell.com/climatechange/category/copenhagen/page/2/) is the website that I found this
+[Here](http://blogs.shell.com/climatechange/category/copenhagen/page/2/) is the website that I found the below chart of 'Global Emission CO2 to 2050' that tempted me to work on for my second blogpost. 
 
 <a href="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg"><img src="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg" alt="Global-Emissions-Case" width="500" height="400"></a>
 
-chart 'Global Emission CO2 to 2050' that tempted me to work on for my second blogpost. For one, this was visually hideous that gained my attention. (It did its job attrating people that way!) For two, it failed to be informative as too many values of different categories were stacked on each other. It's hard to see what's going on at first glance. While learning d3.js through this semester, I have seen beautiful and informative d3.js stacked charts. I wanted to give it a try and thoguht the area chart was a good place to start D3.
+For one, this was visually hideous that gained my attention. (It did its job attrating people that way!) For two, it failed to be informative as too many values of different categories were stacked on each other. It's hard to see what's going on at first glance. While learning d3.js through this semester, I have seen beautiful and informative d3.js stacked charts. I wanted to give it a try and thoguht the area chart was a good place to start D3.
 
-### 2. Data source:
+### 2. Data source: ###
 
 Instead of original data, I wanted to see something more intriguing. So I came up with an idea of looking into top major 5 countries emitting CO2 the most. Data was derived from [here](http://tonto.eia.doe.gov/cfapps/ipdbproject/IEDIndex3.cfm?tid=90&pid=44&aid=8). 
 
 ### 3. First attempt: Stacked area charts
 
-I ploted the data in R to explore data. I noticed that China and USA have values in a wider range. Instead of stacking, I thought of plotting multiple time-series with the same axes like [this](http://bl.ocks.org/mbostock/1157787). However, placing multiple series in the same space may produce overlapping curves that reduce legibility. An alternative approach is to use small multiples: showing each series in its own chart. This could mislead people's perception and interpretation of each chart. For remedy, I found 'click and drag to zoom' feature in d3!! D3 is GREAT! 
+I ploted the data in R to explore data. I noticed that China and USA have values in a wider range. Instead of stacking, I thought of plotting multiple time-series with the same axes like [this](http://bl.ocks.org/mbostock/1157787). However, placing multiple series in the same scope may reduce legibility of series with relatively smaller values. An alternative approach is to use different scales for each series: showing each series in its own chart. This could mislead people's perception and interpretation of each chart. For remedy, I found 'click and drag to zoom' feature in d3!! D3 is GREAT! 
 
 [Intert graph here]
 
