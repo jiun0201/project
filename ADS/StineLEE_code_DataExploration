@@ -1,0 +1,47 @@
+summary(data)
+age=data[,1];workclass=data[,2];fnlwgt=data[,3]
+education=data[,4];edunum=data[,5];maritalstatus=data[,6]
+occupation=data[,7];relationship=data[,8];race=data[,9]
+sex=data[,10];capitalgain=data[,11];capitalloss=data[,12]
+hoursperweek=data[,13];nativecountry=data[,14];salary=data[,15]
+require(ggplot2)
+require("ggthemes")
+
+agedata=subset(data,age>75)
+par(mfrow=c(2,2))
+plot1=ggplot(data, aes(x=age)) + geom_histogram(fill="cornflowerblue",color="black")+ylab("Observations")+ labs(titl="Age distribution")
+
+plot2=ggplot(data, aes(x=workclass)) + geom_histogram(fill="grey",color="black") + ylab("Frequency")
+
+plot3=ggplot(data, aes(x=fnlwgt)) + geom_histogram(fill="salmon",color="black")+ylab("Observations")+ labs(titl="Weight distribution")
+
+plot4=ggplot(data, aes(x=education))+geom_histogram(fill="grey",color="black") + ylab("Frequency")
+
+plot5=ggplot(data, aes(x=edunum)) + geom_histogram(fill="plum",color="black")+ylab("Observations")+ labs(titl="Education Number distribution")
+
+
+plot6=ggplot(data, aes(x=maritalstatus))+geom_histogram(fill="grey",color="black") + ylab("Frequency")
+plot7=ggplot(data, aes(x=occupation))+geom_histogram(fill="grey",color="black") +  ylab("Frequency")
+plot8=ggplot(data, aes(x=relationship))+geom_histogram(fill="grey",color="black") +  ylab("Frequency")
+plot9=ggplot(data, aes(x=race))+geom_histogram(fill="grey",color="black") +  ylab("Frequency")
+plot10=ggplot(data, aes(x=sex))+geom_histogram(fill="grey",color="black") +  ylab("Frequency")
+
+plot11=ggplot(data, aes(x=capitalgain)) + geom_histogram(fill="firebrick1",color="black")+ylab("Observations")+ labs(titl="Capital gain distribution")
+
+plot12=ggplot(data, aes(x=capitalloss)) + geom_histogram(fill="limegreen",color="black")+ylab("Observations")+ labs(titl="Capital loss distribution")
+
+
+plot13=ggplot(data, aes(x=hoursperweek)) + geom_histogram(fill="gold",color="black")+ylab("Observations")+ labs(titl="Weekly Working Hours distribution")
+
+plot14=ggplot(data, aes(x=nativecountry))+geom_histogram(fill="grey",color="black") + ylab("Frequency")
+
+arrange_ggplot2(plot2,plot4,plot6,plot7,plot8,plot9,plot10,plot14,ncol=4)
+arrange_ggplot2(plot1,plot3,plot5,ncol=3)
+arrange_ggplot2(plot11,plot12,plot13,ncol=3)
+
+#We use
+newdata=data.matrix(data)
+newx=as.data.frame(newdata)
+names(newx)
+pairs(~salary+age+fnlwgt+edunum+hoursperweek+capitalgain+capitalloss,newx,main="Pairs Plot for continuous predictors",pch=16,cex=0.01)
+

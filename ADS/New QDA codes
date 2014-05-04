@@ -1,0 +1,28 @@
+
+newdata=data.matrix(data)
+newx=as.data.frame(newdata)
+View(newx)
+train.test=newx[1:15081,]
+test.test=newx[15082:30162,]
+ttsalary=
+qda.t <- qda(salary ~ .,train.test, prior = c(0.7522,0.2478))
+t.predict=predict(qda.t, test.test)$class
+truetest=testsalary
+
+t.predict=as.numeric(t.predict)
+t.mis=abs(truetest-t.predict)
+t.misrate=sum(t.mis)/length(truetest)
+t.misrate
+#0.1977322
+#this is test error rate using original data.
+
+#QDA trai. test rate
+t.predict.train=predict(qda.t, train.test)$class
+truetrain=trainsalary
+t.predict.train=as.numeric(t.predict.train)
+t.trainmis=abs(truetrain-t.predict.train)
+t.mistrain=sum(t.trainmis)/length(truetrain)
+t.mistrain
+#0.1969365
+
+#this is train error rate using original data.

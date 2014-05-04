@@ -1,0 +1,20 @@
+LDA:
+Outlier detection: there’s no outlier in data for vector (fnlwgt and age). There’re outliers in the capital gain and capital loss. However, since we have no idea of what the data represents, we could not simply delete these predicors.
+
+LDA result:
+There are 2426 test samples being misclassified thus the test error is 0.1608647.
+
+How about the training error?
+There are 2486 train samples being misclassified thus the train error rate is 0.1648432.
+
+Description (Analysis):
+ As for prediction on social science, predict error around 15% is already a really good prediction. However, since our goal is to predict “whether a person makes over 50K a year”. And when we looked in detail as the miss classification rate on test data set, we found 43.26% (1635 out of 3780)people with salary over 50K have been misclassified. Therefore LDA model may not be the model we’re finding. 
+
+QDA:
+Just like LDA: 2982 of test samples were misclassified thus the test error rate is 0.1977322.
+And 2970 of train samples were misclassified thus the train error is 0.1969365. It’s even worse than LDA. This is because QDA has a lot of coefficients need to be estimate in this data set. As usual, the tradeoff between LDA or QDA is one of bias and variance: LDA makes stronger assumptions and obtains estimates with lower variance
+
+Besides, if take detailed look at QDA prediction, we could also find there’re 65% (2459 out of 3780) people with salary over 50K have been misclassified. It’s really bad prediction so we will not use QDA for our prediction.
+
+RDA ( Regularised discriminant analysis)
+We also tried RDA in r. However, since RDA is basically a combination of LDA and QDA. And neither of these models works well. Therefore the result didn’t show up well also. We got misclassification rate around 16.5% and still bad prediction on our goal.

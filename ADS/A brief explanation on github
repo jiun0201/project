@@ -1,0 +1,45 @@
+cd ~/[insert: name of directory that you want to save all your work in on your local PC]
+
+
+git init # to initiate git repository, it will create .git to monitor and keep track of what is happening on your directory. so '.git' is like a BIG BROTHER basically.
+
+git status # to check any changes in the chosed directory
+
+git clone ‘https://github.com/columbia-w4249-spr2014/team_6.git’
+# after this step, go see your direcotry, there must be a new folder name 'team_6' under your chosen directory. the name is team_6 is cus of the end of the url address.
+
+cd ~/GIT/team_6 # change your working directory to team_6
+
+git remote add [insert: name of url] 'https://github.com/columbia-w4249-spr2014/team_6.git’
+# to sync and connect your cloned folder in your PC with the url and call it ADS that you don't have to enter url everytime.
+
+git fetch
+# to update your folder with the github server repository
+
+Say, you created a document and saved in the project folder. And you're sure that you wanna share it with us. Then, follow this process
+
+git status # to check: it will probably tell you there is a change. This is obvious because you made a change and you know it.
+
+git add [insert: the file name you created] # add to git stage so that git can monitor your file but not commited to github page yet
+
+git commit -m "commnets you wanna make" # commit the file
+
+git push origin # finally, you should push it to github page
+
+#To remove
+git rm [Insert: name of file]
+git commit -m "bla bla bla"
+git push origin
+
+
+
+Process e.g.
+cd ~/GIT
+git init
+git clone ADS 'https://github.com/columbia-w4249-spr2014/team_6.git'
+git remote add ADS 'https://github.com/columbia-w4249-spr2014/team_6.git
+git fetch
+git status
+git add Finalreport
+git commit -m "draft report"
+git push origin

@@ -1,0 +1,165 @@
+theURL="https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
+data=read.table(theURL, header=FALSE,sep=",")
+
+names(data)=c("age","workclass","fnlwgt","education","edunum","maritalstatus","occupation","relationship","race","sex","capitalgain","capitalloss","hoursperweek","nativecountry","salary")
+View(data)
+# create dummy variables for workclass, education, maritalstatus, occupation, relationship, race, sex, nativecountry and salary.
+
+install.packages("caret")
+require("caret")
+
+data$salarycat <- as.numeric(data$salary)
+fittrain <- lm(salarycat ~., data=data[1:floor(nrow(data)/2),-15])
+summary(fittrain)
+# fittest <- predict(fittrain, data[-(1:floor(nrow(data)/2)),-15])
+
+
+
+data$age=as.character(data$age)
+age=data$age
+agdummy=dummyVars(~age,data)
+agmatrix=predict(agdummy, newdata=data)
+#check
+#head(agmatrix)
+#dim(agmatrix)
+
+wcdummy=dummyVars(~workclass,data)
+wcmatrix=predict(wcdummy, newdata=data)
+#check
+#head(wcmatrix)
+#dim(wcmatrix)
+#delete "?"
+wcmatrix1=wcmatrix[,-1]
+
+
+edudummy=dummyVars(~education,data)
+edumatrix=predict(edudummy, newdata=data)
+#check
+#head(edumatrix)
+#dim(edumatrix)
+
+data$edunum=as.character(data$edunum)
+edunum=data$edunum
+endummy=dummyVars(~edunum,data)
+enmatrix=predict(endummy, newdata=data)
+#check
+#head(enmatrix)
+#dim(enmatrix)
+
+msdummy=dummyVars(~maritalstatus,data)
+msmatrix=predict(msdummy, newdata=data)
+#check
+#head(msmatrix)
+#dim(msmatrix)
+
+ocdummy=dummyVars(~occupation,data)
+ocmatrix=predict(ocdummy, newdata=data)
+#check
+#head(ocmatrix)
+#dim(ocmatrix)
+#delete "?"
+ocmatrix1=ocmatrix[,-1]
+
+
+rsdummy=dummyVars(~relationship,data)
+rsmatrix=predict(rsdummy, newdata=data)
+#check
+#head(rsmatrix)
+#dim(rsmatrix)
+
+rcdummy=dummyVars(~race,data)
+rcmatrix=predict(rcdummy, newdata=data)
+#check
+#head(rcmatrix)
+#dim(rcmatrix)
+
+sexdummy=dummyVars(~sex,data)
+sexmatrix=predict(sexdummy, newdata=data)
+#check
+#head(sexmatrix)
+#dim(sexmatrix)
+
+data$capitalgain=as.character(data$capitalgain)
+capitalgain=data$capitalgain
+cgdummy=dummyVars(~capitalgain,data)
+cgmatrix=predict(cgdummy, newdata=data)
+#check
+#head(cgmatrix)
+#dim(cgmatrix)
+
+data$capitalloss=as.character(data$capitalloss)
+capitalloss=data$capitalloss
+cldummy=dummyVars(~capitalloss,data)
+clmatrix=predict(cldummy, newdata=data)
+#check
+#head(clmatrix)
+#dim(clmatrix)
+
+data$hoursperweek=as.character(data$hoursperweek)
+hoursperweek=data$hoursperweek
+hwdummy=dummyVars(~hoursperweek,data)
+hwmatrix=predict(hwdummy, newdata=data)
+#check
+#head(hwmatrix)
+#dim(hwmatrix)
+
+ncdummy=dummyVars(~nativecountry,data)
+ncmatrix=predict(ncdummy, newdata=data)
+#check
+#head(ncmatrix)p[]
+#dim(ncmatrix)
+#delete "?"
+ncmatrix1=ncmatrix[,-1]
+
+sadummy=dummyVars(~salary,data)
+samatrix=predict(sadummy, newdata=data)
+#check
+#head(samatrix)
+#dim(samatrix)
+
+sparse=cbind(agmatrix,wcmatrix1,edumatrix,enmatrix,msmatrix,ocmatrix1,rsmatrix,rcmatrix,sexmatrix,cgmatrix,clmatrix,hwmatrix,ncmatrix1,samatrix)
+dim(sparse)
+
+#LDA QDA->RDA.
+install.packages("MASS")
+require(MASS)
+usedata=cbind(age,wcmatrix1,data$fnlwgt,edumatrix,edunum,msmatrix,ocmatrix1,rsmatrix,rcmatrix,sexmatrix,capitalgain,capitalloss,hoursperweek,ncmatrix1,data$salary)
+# RH
+colnames(usedata)[106] <- "salary" # RH
+colnames(usedata)[106] <- "fnlwgt" # RH
+
+dim(usedata)
+#1 stands for <=50K, 2 stands for >50
+#
+#traindata=data first
+#30162/2=15081 # RH why is it 30162?? isn't it 32561?
+traindata <- usedata[1:floor(nrow(usedata)/2), ] # RH
+dim(traindata) # RH
+View(traindata)
+#outlier
+install.packages("outliers") # RH
+require("outliers")
+
+chisq.out.test(data$fnlwgt, variance=var(data$fnlwgt), opposite = FALSE)
+#OK, no outlier nor missing data nor "?"
+
+df=as.data.frame(usedata)
+View(df)
+traindf<-df[1:15081,] # should we change to floor(32561/2)?
+table(traindf$salary)
+table(traindf$salary)[1]/sum(table(traindf$salary))
+table(traindf$salary)[2]/sum(table(traindf$salary))
+
+#
+# Probability for the label '>50K'  : 23.93% / 24.78% (without unknowns)
+# Probability for the label '<=50K' : 76.07% / 75.22% (without unknowns)
+  
+
+
+
+
+rda.testerror=sum(abs(truetest-(as.numeric(predict(rda, test.rda)$class))))/length(truetest)
+rda.testerror
+lambda1 <- lambda[which.min(rda.trainerror)]
+lambda1
+

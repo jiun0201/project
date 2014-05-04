@@ -1,0 +1,6 @@
+About ? mark
+Why we decide to delete ? instead of other procedures?
+
+1.	? mark only appear only on 2nd, 7th 14th column and some row(observation) contains more than 2 missing value. If we delete those row, we still have 30162 observations which should be enough to start our analysis. Otherwise, our data set will be very messy.
+
+2.	Besides, we also noticed that the original data set has 48842 observations. And for preparation, 3620 observations with unknown data(NA) have already been deleted in our data-description file. Therefore we should continue the way we treat missing values.
