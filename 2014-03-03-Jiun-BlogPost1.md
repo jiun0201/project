@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jiun's INITIAL Blog Post 1 + 1
+title: Jiun's INITIAL Blog Post 1
 description: 1. Updating a chart from Data Visualization Gallery in US Census Bureau website
 tags: blogpost 
 2. Updating a table of GDELT Trend Report 
@@ -17,8 +17,7 @@ The website actually provides data table.[View Data Table](http://www.census.gov
 
 2. Visualization
 
-![Plot1]()
-
+![Plot1](https://github.com/jiun0201/project/blob/master/EDAV/plot1.jpeg)
 
 
 ### GDELT Global Materal Conflict 48-Hour Trend Reprot 3/25/2014
@@ -27,19 +26,16 @@ GDELT is Global Database of Events, Langugage, and Tone Event Database. It produ
 ## Complete Country Ranking table
 The table of Country Ranking was particularly caught my eyes. Table could have been replaced definitely by one simple graph. so I tried.
 
-1. Scrapping data
+1. Scrapping and cleaning data
 Scap pdf data into CSV and read it into R.
 
-2. Data Cleaning
-
-3. Plot
+2. Plot
 I ploted based on Coverage Volume. According to the report, Coverage Rank column ranks country based on the total raw volume of articles, with 1 being the country with the most articles. While cleaning, I found several '0' as a rank which I think that it was because its respective Volume is '0'. 
 
-![Plot1](Vol21.22)
-![Plot2](Vol23.24)
-![Plot3](Volboth)
-![Plot4](VolC)
-![Plot5](MapVolboth)
-![Plot6](MapVolC)
+![Plot1](https://github.com/jiun0201/project/blob/master/EDAV/Vol21.22.jpeg)
+![Plot2](https://github.com/jiun0201/project/blob/master/EDAV/Vol23.24.jpeg)
+![Plot3](https://github.com/jiun0201/project/blob/c929ee6a485ec046b6ec39f88b9683edf63bd681/EDAV/Volboth.jpeg)
+![Plot4](https://github.com/jiun0201/project/blob/master/EDAV/VolC.jpeg)
+![Plot5](https://github.com/jiun0201/project/blob/master/EDAV/MapVolC.jpeg)
 
 I think Data could be visually more effective if use D3. I am learning D3 now and plan to do next blog post using D3.
