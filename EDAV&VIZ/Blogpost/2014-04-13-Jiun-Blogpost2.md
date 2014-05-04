@@ -16,9 +16,9 @@ tags: blog, d3, R
 
 [This](http://blogs.shell.com/climatechange/category/copenhagen/page/2/) is the website that I found this
 
-<a href="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg"><img src="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg" alt="Global-Emissions-Case" width="200" height="400"></a>
+<a href="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg"><img src="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg" alt="Global-Emissions-Case" width="500" height="400"></a>
 
-![]({{ site.baseurl }}http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg) chart 'Global Emission CO2 to 2050' that tempted me to work on for my second blogpost. For one, this was visually hideous that gained my attention. (It did its job attrating people that way!) For two, it failed to be informative as too many values of different categories were stacked on each other. It's hard to see what's going on at first glance. While learning d3.js through this semester, I have seen beautiful and informative d3.js stacked charts. I wanted to give it a try and thoguht the area chart was a good place to start D3.
+chart 'Global Emission CO2 to 2050' that tempted me to work on for my second blogpost. For one, this was visually hideous that gained my attention. (It did its job attrating people that way!) For two, it failed to be informative as too many values of different categories were stacked on each other. It's hard to see what's going on at first glance. While learning d3.js through this semester, I have seen beautiful and informative d3.js stacked charts. I wanted to give it a try and thoguht the area chart was a good place to start D3.
 
 ### 2. Data source:
 
