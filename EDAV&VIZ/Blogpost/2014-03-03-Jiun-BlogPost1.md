@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jiun's INITIAL Blog Post 1 + 1
+title: Jiun's INITIAL Blog Post 1
 description: 1. Updating a chart from Data Visualization Gallery in US Census Bureau website
 tags: blogpost 
 2. Updating a table of GDELT Trend Report 

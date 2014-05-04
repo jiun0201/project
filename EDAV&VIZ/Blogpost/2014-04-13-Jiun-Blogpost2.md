@@ -2,7 +2,7 @@
 layout: post
 title: Jiun - Learning d3.js by doing!
 description:
-tags: blog
+tags: blog, d3, R
 ---
 <section>
 	<section>
@@ -10,11 +10,15 @@ tags: blog
 * Tools: d3, R
 * Theme: Visualizing Time-series data
 
-### World's Top Five Countries by CO2 emissions 
+## World's Top Five Countries by CO2 emissions ##
 
-### 1. Graph Critiques:
+### 1. Graph Critiques: ###
 
-[Here](http://blogs.shell.com/climatechange/category/copenhagen/page/2/) is the chart 'Global Emission CO2 to 2050' that tempted me to work on for my second blogpost. For one, this was visually hideous that gained my attention. (It did its job attrating people that way!) For two, it failed to be informative as too many values of different categories were stacked on each other. It's hard to see what's going on at first glance. While learning d3.js through this semester, I have seen beautiful and informative d3.js stacked charts. I wanted to give it a try and thoguht the area chart was a good place to start D3.
+[This](http://blogs.shell.com/climatechange/category/copenhagen/page/2/) is the website that I found this
+
+<a href="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg"><img src="http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg" alt="Global-Emissions-Case" width="200" height="400"></a>
+
+![]({{ site.baseurl }}http://blogs.shell.com/climatechange/wp-content/uploads/2010/01/Global-Emissions-Case-2.jpg) chart 'Global Emission CO2 to 2050' that tempted me to work on for my second blogpost. For one, this was visually hideous that gained my attention. (It did its job attrating people that way!) For two, it failed to be informative as too many values of different categories were stacked on each other. It's hard to see what's going on at first glance. While learning d3.js through this semester, I have seen beautiful and informative d3.js stacked charts. I wanted to give it a try and thoguht the area chart was a good place to start D3.
 
 ### 2. Data source:
 
@@ -29,13 +33,13 @@ I ploted the data in R to explore data. I noticed that China and USA have values
 I liked the 'click and drage to zoom' option for zooming in to look for certain period. However, adding mouse-over could provide information about Y-axis values for each year. 
 
 ### 4. Initial challenges & thoughts:
-* Javascript was like a foreign language to me; interesting but hard to grasp!<br>
-* Setting up d3 on local server was a long and confusing process. Loading external data in d3 wasn't simple after all. <br>
-* Getting around with 'dates' in d3 were painful. Parsing dates were not done very well with d3. <br>
-* Color coding was FUN! <br>
+* Javascript was like a foreign language to me; interesting but hard to grasp! 
+* Setting up d3 on local server was a long and confusing process. Loading external data in d3 wasn't simple after all. 
+* Getting around with 'dates' in d3 were painful. Parsing dates were not done very well with d3.
+* Color coding was FUN! 
 
 ### 5. Second attempt: Stream graph
-nvd3
+
 
 
 ### D3 learning materials:
