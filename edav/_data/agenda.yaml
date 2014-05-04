@@ -200,14 +200,13 @@
     - [ggplot in Python](http://blog.yhathq.com/posts/ggplot-for-python.html)
 
 - date: 2014-04-21
-  topic: Bayesian logistic and item-response-family models
-  before: |
-    - Gelman & Hill ch. 6, 14.3
+  topic: data structures, storage, and modeling (NOTE will move to earlier date)
 
 - date: 2014-04-23
   topic: model checking, displays, and uncertainty
   before: |
-    - Gelman&Hill ch. 8
+    - Gelman&Hill ch. TBD
+    - Wilkinson ch. TBD
 
 - date: 2014-04-28
   topic: class and project reviews

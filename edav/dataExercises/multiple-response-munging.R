@@ -4,8 +4,9 @@ makeResponse<- function(){
            levels=1:26, labels=indicators)
 }
 inputData <- data.frame(V1 = makeResponse(),
-                        
                         V2 = makeResponse())
+
+
 oldFunction <- function(inputData){
     out <- as.data.frame(matrix(0, nrow(inputData),
                                 length(unique(indicators))))
@@ -17,12 +18,6 @@ oldFunction <- function(inputData){
         }
     }
     return(out)
-}
-
-newFunction <- function(inputData){
-    Ind1 <- model.matrix(~V1 -1 ,data=inputData)
-    Ind2 <- model.matrix(~V2 -1 ,data=inputData)
-    as.data.frame(Ind1 | Ind2)
 }
 
 system.time(oldResult <- oldFunction(inputData))
