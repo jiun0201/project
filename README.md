@@ -3,7 +3,7 @@ project
 
 Data Science & Visualization
 
-This repo is for two projects of class at Columbia University.
+This repo is for two projects at Columbia University.
 
 1) ADS: Applied Data Science
 
