@@ -28,7 +28,7 @@ Instead of original data, I wanted to see something more intriguing. So I came u
 
 I ploted the data in R to explore data. I noticed that China and USA have values in a wider range. Instead of stacking, I thought of plotting multiple time-series with the same axes like [this](http://bl.ocks.org/mbostock/1157787). However, placing multiple series in the same scope may reduce legibility of series with relatively smaller values. An alternative approach is to use different scales for each series: showing each series in its own chart. This could mislead people's perception and interpretation of each chart though. For remedy, I found 'click and drag to zoom' feature in d3!! D3 is GREAT! 
 
-<div align="left"><iframe src="http://bl.ocks.org/jiun0201/raw/d98c874281f02fdd086e/" allowfullscreen="allowfullscreen" frameborder="0" width="1000" height="550"></iframe></div>
+<div align="left"><iframe src="http://jsfiddle.net/stephenkappel/bk854/embedded/result" allowfullscreen="allowfullscreen" frameborder="0" width="1000" height="550"></iframe></div>
 
 I liked the 'click and drage to zoom' option for zooming in to look for certain period. However, adding mouse-over could provide information about Y-axis values for each year. 
 
