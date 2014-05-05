@@ -4,8 +4,6 @@ title: Jiun - Learning d3.js by doing!
 description:
 tags: blog, d3, R
 ---
-<section>
-	<section>
 
 * Tools used: d3, R
 * Theme: Visualizing Time-series data
@@ -61,6 +59,3 @@ As you may be aware, there are prolific materals available online. This is good 
 
 
 
-
-</section>
-</section>
