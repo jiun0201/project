@@ -14,7 +14,7 @@ tags: blog, d3, R, rCharts
 
 I couldn't resist to work on this plot below. It's quite amazing to see how they put continuous variables ('Height' and 'Weight') and a categorical variable ('Sex') in the same Scatterplot Matrix. 
 
-<a href="http://www.jmp.com/support/help/images/students.gif, http://www.jmp.com/support/help/Example_of_a_Scatterplot_Matrix.shtml"><img src="http://www.jmp.com/support/help/images/students.gif, http://www.jmp.com/support/help/Example_of_a_Scatterplot_Matrix.shtml" alt="Scatterplot Matrix" width="450" height="450"></a>
+<a href="http://www.jmp.com/support/help/images/students.gif"><img src="http://www.jmp.com/support/help/images/students.gif" alt="Scatterplot Matrix" width="450" height="450"></a>
 
 The web link for the plot is [here]. Scatterplot Matrix is mainly used to represent the relationships among multiple variables. I admit visualizing high dimensonal data is not a easy task. In spite of this, putting 'Sex' variable in the same scatterplot matrix wasn't a smart choice, in my opinion. 
 
