@@ -6,8 +6,6 @@ body {
   font: 300 10px "Open Sans", Arial, sans-serif;
   font-color: #96999b;
 }
-
-
 .axis path, .axis line {
  fill: none;
   stroke: #96999b;
@@ -71,9 +69,9 @@ strokecolor = colorrange[0];
 
 var format = d3.time.format("%m/%d/%y");
 
-var margin = {top: 20, right: 60, bottom: 30, left: 60};
+var margin = {top: 50, right: 60, bottom: 50, left: 60};
 var width = document.body.clientWidth - margin.left - margin.right;
-var height = 600 - margin.top - margin.bottom;
+var height = 500 - margin.top - margin.bottom;
 
 var tooltip = d3.select("body")
     .append("div")
@@ -81,14 +79,14 @@ var tooltip = d3.select("body")
     .style("position", "absolute")
     .style("z-index", "15")
     .style("visibility", "hidden")
-    .style("top", "30px")
+    .style("top", "70px")
     .style("left", "100px");
 
 var x = d3.time.scale()
     .range([0, width]);
 
 var y = d3.scale.linear()
-    .range([height-10, 0]);
+    .range([height-20, 0]);
 
 var z = d3.scale.ordinal()
     .range(colorrange);
@@ -207,9 +205,9 @@ var graph = d3.csv(csvpath, function(data) {
         .style("position", "absolute")
         .style("z-index", "19")
         .style("width", "3px")
-        .style("height", "600px")
-        .style("top", "10px")
-        .style("bottom", "30px")
+        .style("height", "500px")
+        .style("top", "40px")
+        .style("bottom", "50px")
         .style("left", "0px")
         .style("background", "#fff");
 

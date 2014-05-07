@@ -1,4 +1,3 @@
-setwd("/Users/jiunkim/2014SpringCourses/R/EDAV")
 library(XML)
 
 # Reading data url
@@ -96,22 +95,14 @@ ggplot(data=sort, aes(x=factor(language), y=numbers, fill=time)) + geom_bar(stat
 
 
 require(plotrix)
-require(gap.barplot)
-#gap.barplot(sort,gap=c(10000000,30000000),xlab="Language",ytics=c(11000000,30000000),
-            ylab="Values",main="Barplot with gap")
+#require(gap.barplot)
+#gap.barplot(sort,gap=c(10000000,30000000),xlab="Language",ytics=c(11000000,30000000),ylab="Values",main="Barplot with gap")
 
 
-#qplot(language, data=sort, geom = "bar", fill = time,
-      position="dodge")
-#qplot(cut, data = diamonds, geom = "bar", fill = cut) +
-  facet_grid(. ~ color) +
-  opts(axis.text.x = theme_text(angle = 90, hjust = 1, size = 8,
-                                colour = "grey50"))
+#qplot(language, data=sort, geom = "bar", fill = time,position="dodge")
+#qplot(cut, data = diamonds, geom = "bar", fill = cut) + facet_grid(. ~ color) + opts(axis.text.x = theme_text(angle = 90, hjust = 1, size = 8,colour = "grey50"))
 #Line graph
-
-#qplot(time,numbers,color=language,group=language, data=sort,geom=c("point","line"),
-      main="OH-01 2006 General Turnout by Age Group, Last 4 (Full)",xlab="Language",ylab="numbers") + 
-  scale_colour_hue(name="Langugage")
+#qplot(time,numbers,color=language,group=language, data=sort,geom=c("point","line"),main="OH-01 2006 General Turnout by Age Group, Last 4 (Full)",xlab="Language",ylab="numbers") + scale_colour_hue(name="Langugage")
 
 
 

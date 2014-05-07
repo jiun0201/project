@@ -10,8 +10,6 @@
 # the most articles, and displays its rank (Last 48 Hours / Previous 48 Hours) 
 # and change between the last and previous 48 hours.
 
-setwd("~/2014SpringCourses/R/EDAV")
-
 #Data cleaning
 rank <- read.csv("countryranking.csv", header=TRUE, sep=",")
 sapply(rank, class)
@@ -129,8 +127,8 @@ ggplot(VolC30, aes(x=Country, y=VolChange)) +
 RankL <- newrank[order(-newran)]
 
 # two World map with volumn c
-install.packages("joinCountryData2Map")
-install.packages("rworldmap")
+#install.packages("joinCountryData2Map")
+#install.packages("rworldmap")
 library(rworldmap)
 map <- joinCountryData2Map(newrank,  joinCode="NAME", nameJoinColumn = "Country", verbose=TRUE)
 
