@@ -11,6 +11,7 @@ d$newregion[d$Region=="3"] <-"Other Region"
 
 d <-d[,c(3,4,5,6,9,10)]
 
+names(d) <- c("Fresh","Milk","Grocery","Frozen","Channel", "Region" )
 ScatterMatrix = setRefClass('ScatterMatrix', contains = 'rCharts', 
                             methods = list(initialize = function(){callSuper()
                             LIB <<- get_lib("http://benjh33.github.io/rchart_plugins/scatter_matrix")
@@ -43,9 +44,9 @@ ScatterMatrix = setRefClass('ScatterMatrix', contains = 'rCharts',
 
 chart <- ScatterMatrix$new()
 
-chart$set(group='newchannel',data = d,
+chart$set(group='Channel',data = d,
 #   data_file = dname, # use a data_file or data argument, not both
-          filter = "newregion",
+          filter = "Region",
           height=700,
           width=700,
           opacity = 0.4,
@@ -54,3 +55,5 @@ chart$set(group='newchannel',data = d,
           id = chart$params$dom)
 
 chart
+
+chart$publish('ScatterPlot Matrix', host='gist')
