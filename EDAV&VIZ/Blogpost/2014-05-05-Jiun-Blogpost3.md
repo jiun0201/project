@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jiun - Scatter-plot matrix using rCharts
+title: Jiun's Blogpost 3: Scatter-plot matrix using rCharts
 description:
 tags: blog, d3, R, rCharts
 ---
@@ -16,25 +16,23 @@ I couldn't resist to work on this plot below. It's quite amazing to see how they
 
 <a href="http://www.jmp.com/support/help/images/students.gif"><img src="http://www.jmp.com/support/help/images/students.gif" alt="Scatterplot Matrix" width="450" height="450"></a>
 
-The web link for the plot is [here]. Scatterplot Matrix is mainly used to represent the relationships among multiple variables. I admit visualizing high dimensonal data is not a easy task. In spite of this, putting 'Sex' variable in the same scatterplot matrix wasn't a smart choice, in my opinion. 
-
-Then, I thought about making a plot like [this]. I liked cus I don't have to waste space
-Scatterplot Matrix Brushing -Mike Bostock
-
+The web link for the plot is [here](http://www.jmp.com/support/help/Example_of_a_Scatterplot_Matrix.shtml). Scatterplot Matrix is mainly used to represent the relationships among multiple variables. Though I admit visualizing high dimensonal data is not an easy task, putting 'Sex' variable together with continuous variables in one scatterplot matrix wasn't a smart choice, in my opinion. 
 
 ### 2. Data source: ###
 
-Instead of original data, I wanted to see something more intriguing. So I came up with an idea of looking into top major 5 countries emitting CO2 the most. Data was derived from [here](http://tonto.eia.doe.gov/cfapps/ipdbproject/IEDIndex3.cfm?tid=90&pid=44&aid=8). 
+Since there was no way that I could identify on data source, I used a different set of data which has a similar properties with an aim to represent a scatter matrix in a more effective way. I extracted data from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Wholesale+customers). The website holds many types of dataset, just like dastaset built in R or R packages. I chose this dataset because it contains both categorical and continuous variables.  
 
-### 3. First attempt: Stacked area charts with click and drag option
+### 3. Thought process and Actions: ###
 
-Whenever working on
+I thought about making a plot like [this](http://hci.stanford.edu/jheer/files/zoo/ex/stats/splom.html). There were two things that I wanted to improve upon this plot though. First, I wanted to see different scenarios of "US", "EU", "Japan" by adding an interactive selection option. Second, I wanted to use the space of diagonal cells/squares of matrices. Then, I discovered a new world 'rCharts'. Volia! rCharts is an R package to create, customize and publish interactive javascript visualizations from R using a familiar lattice style plotting interface. Here is my embedded visualization below. The R code and the plot can be seen [here](http://bl.ocks.org/jiun0201/9f98014751a856da1e6b). 
 
+
+<div align="left"><iframe src="http://bl.ocks.org/jiun0201/9f98014751a856da1e6b/" allowfullscreen="allowfullscreen" frameborder="0" width="1000" height="700"></iframe></div>
+
+I did 
 I ploted the data in R to explore data. I noticed that China and USA have values in a wider range. Instead of stacking, I thought of plotting multiple time-series with the same axes like [this](http://bl.ocks.org/mbostock/1157787). However, placing multiple series in the same scope may reduce legibility of series with relatively smaller values. An alternative approach is to use different scales for each series: showing each series in its own chart. This could mislead people's perception and interpretation of each chart though. For remedy, I found 'click and drag to zoom' feature in d3!! D3 is GREAT! 
 
-Here is my first visualization embedded below. The d3.js code and data can be seen [here](http://bl.ocks.org/jiun0201/d98c874281f02fdd086e). 
-
-<div align="left"><iframe src="http://bl.ocks.org/jiun0201/raw/d98c874281f02fdd086e/" allowfullscreen="allowfullscreen" frameborder="0" width="1000" height="550"></iframe></div>
+Here is my first visualization embedded below. 
 
 I liked the 'click and drage to zoom' option for zooming in to look for certain period. Adding mouse-over could provide information about Y-axis values for each year. 
 
