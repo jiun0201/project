@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Jiun's Blogpost 3: Scatter-plot matrix using rCharts
+title: Jiun's Blogpost 3: Scatterplot Matrix using rCharts
 description:
 tags: blog, d3, R, rCharts
 ---
 
 * Tools used: rCharts
-* Theme: Scatterplot matrix
+* Theme: Scatterplot Matrix
 
 ## Wholesale Customers' Spending Behavior by Channel and Region##
 
