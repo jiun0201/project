@@ -16,7 +16,7 @@ I couldn't resist to work on this plot below. It's quite amazing to see how they
 
 <a href="http://www.jmp.com/support/help/images/students.gif"><img src="http://www.jmp.com/support/help/images/students.gif" alt="Scatterplot Matrix" width="450" height="450"></a>
 
-The web link for the plot is [here](http://www.jmp.com/support/help/Example_of_a_Scatterplot_Matrix.shtml). Scatterplot Matrix is mainly used to represent the relationships among multiple variables. Though I admit visualizing high dimensonal data is not an easy task, putting 'Sex' variable together with continuous variables in one scatterplot matrix wasn't a smart choice, in my opinion. 
+The web link for the plot is [here](http://www.jmp.com/support/help/Example_of_a_Scatterplot_Matrix). Scatterplot Matrix is mainly used to represent the relationships among multiple variables. Though I admit visualizing high dimensonal data is not an easy task, putting 'Sex' variable together with continuous variables in one scatterplot matrix wasn't a smart choice, in my opinion. 
 
 ### 2. Data source: ###
 
