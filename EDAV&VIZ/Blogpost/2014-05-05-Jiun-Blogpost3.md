@@ -20,7 +20,7 @@ The web link for the plot is [here](http://www.jmp.com/support/help/Example_of_a
 
 ### 2. Data source: ###
 
-Since there was no way that I could identify on data source, I used a different set of data which has a similar properties with an aim to represent a scatter matrix in a more effective way. I extracted data from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Wholesale+customers). The website holds many types of dataset, just like dastaset built in R or R packages. I chose this dataset because it contains both categorical and continuous variables.  
+Since there was no way that I could identify the source of the original data, I used a different set of data which has similar properties and hoped to represent the data in a more effective scatterplot matrix. I extracted data from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Wholesale+customers). The website holds many types of dataset, just like dastaset built in R or R packages. I chose this dataset because it contains both categorical and continuous variables.  
 
 ### 3. Thought process and Actions: ###
 
