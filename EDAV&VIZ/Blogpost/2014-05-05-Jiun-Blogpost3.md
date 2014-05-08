@@ -12,7 +12,7 @@ tags: blog, d3, R, rCharts
 
 ### 1. Graph Critiques: ###
 
-I couldn't resist to work on this plot below. It's quite amazing to see how they put continuous variables ('Height' and 'Weight') and a categorical variable ('Sex') in the same Scatterplot Matrix. 
+I couldn't resist to work on this plot below. It's quite amazing to see how one put continuous variables ('Height' and 'Weight') and a categorical variable ('Sex') in the same Scatterplot Matrix. 
 
 <a href="http://www.jmp.com/support/help/images/students.gif"><img src="http://www.jmp.com/support/help/images/students.gif" alt="Scatterplot Matrix" width="450" height="450"></a>
 
@@ -20,11 +20,11 @@ The web link for the plot is [here](http://www.jmp.com/support/help/Example_of_a
 
 ### 2. Data source: ###
 
-Since there was no way that I could identify the source of the original data, I used a different set of data which has similar properties and hoped to represent it in a more effective scatterplot matrix. I extracted data from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Wholesale+customers). Beside this particular dataset, the website actually holds various types of dataset. 
+Since there was no way that I could identify the source of the original data, I used a different set of data which has similar properties and hoped to represent it in a more way. I extracted data from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Wholesale+customers). Beside this particular dataset, the repository actually holds various types of dataset. 
 
 ### 3. Thought process and Actions: ###
 
-I thought of making a plot like [this](http://hci.stanford.edu/jheer/files/zoo/ex/stats/splom.html). There were two things that I wanted to improve upon this plot though. First, I wanted to see different scenarios by adding an interactive selection option; in this case, it would be "US" and "EU" and "Japan". Second, I wanted to use the space of diagonal cells/parts of matrices. Then, I discovered a new world 'rCharts'. Volia! rCharts is an R package to create, customize and publish interactive javascript visualizations from R using a familiar lattice style plotting interface. Here is my embedded visualization below. The R code and the plot can be seen [here](http://bl.ocks.org/jiun0201/6c1cfef66c61c7bd8952). 
+I thought of making a plot like [this](http://hci.stanford.edu/jheer/files/zoo/ex/stats/splom.html). There were two things that I wanted to improve upon this plot though. First, I wanted to see different scenarios by adding an interactive selection option; in this case, it would be "US" and "EU" and "Japan". Second, I wanted to use the space of diagonal cells/parts of matrices by adding box-plot, more informative. Then, I discovered a new world 'rCharts'. Volia! rCharts is an R package to create, customize and publish interactive javascript visualizations from R using a familiar lattice style plotting interface. Here is my embedded visualization below. The R code and the plot can be seen [here](http://bl.ocks.org/jiun0201/6c1cfef66c61c7bd8952). 
 
 <div align="left"><iframe src="http://bl.ocks.org/jiun0201/6c1cfef66c61c7bd8952/" allowfullscreen="allowfullscreen" frameborder="0" width="1200" height="850"></iframe></div>
 
