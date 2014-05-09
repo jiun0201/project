@@ -7,17 +7,17 @@ tags: blog, R, ggplot, d3, nvd3
 ---
 
 * Tools used: nvd3, R, d3
-* Theme: Visualizing MultiBarChart using nvd3
+* Theme: MultiBarChart using ggplot and nvd3
 
 ## Top Languages Other than English Spoken in 1980 and Changes in Relative Rank, 1990-2010 ##
 
 ### 1. Graph Critiques ###
 
-US Census Bureau has a '[Data Visualization Gallery]'(http://www.census.gov/dataviz/visualizations). Its initiative is great though I found this particular graph very confusing. 
+US Census Bureau has a [Data Visualization Gallery](http://www.census.gov/dataviz/visualizations). Its initiative is great though I found this particular graph very confusing. 
 
 <div align="left"><iframe src="http://www.census.gov/dataviz/visualizations/045/" allowfullscreen="allowfullscreen" frameborder="0" width="950" height="800"></iframe></div>
 
-Just too much information such as different sizes of square, lines connected between them, different colors were all squeezed in one graph. I actually expected a simple graph of this topic since the topic is fairly starightforward. 
+Too much information such as different sizes of square, lines connected between them, different colors were all squeezed in one graph. I actually expected a simple graph since this topic is fairly starightforward. 
 
 ### 2. Data munging ###
 
@@ -27,6 +27,19 @@ The website provides data [table](http://www.census.gov/dataviz/visualizations/0
 
 <a href="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/blogpost1_multibar.png"><img src="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/blogpost1_multibar.png" alt="Top Language Spoken Other Than English" width="800" height="600"></a>
 
+It shows the change over time though the comparison between languages weren't displayed.
+
+### 4. Second attempt with NVD3 ###
+
+I found 
+
+1) Grouped by language
+
+<div align="left"><iframe src="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/novus-nvd3-6867ea6/multibar_lang.html" allowfullscreen="allowfullscreen" frameborder="0" width="1310" height="750"></iframe></div>
+
+2) Grouped by time(year)
+
+<div align="left"><iframe src="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/novus-nvd3-6867ea6/multibarhorizontal.html" allowfullscreen="allowfullscreen" frameborder="0" width="1310" height="750"></iframe></div>
 
 
 ## Visualizing a table of 'Global Database of Events, Language, and Tone Event Database (GDELT)' Trend Report ##
