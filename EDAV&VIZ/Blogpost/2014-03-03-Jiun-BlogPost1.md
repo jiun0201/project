@@ -13,7 +13,7 @@ tags: blog, R, ggplot, d3, nvd3
 
 ### 1. Graph Critiques ###
 
-US Census Bureau has a '[Data Visualization Gallery]'(http://www.census.gov/dataviz/visualizations). Its initiative is great though I found this particular graph below very confusing. 
+US Census Bureau has a '[Data Visualization Gallery]'(http://www.census.gov/dataviz/visualizations). Its initiative is great though I found this particular graph very confusing. 
 
 <div align="left"><iframe src="http://www.census.gov/dataviz/visualizations/045/" allowfullscreen="allowfullscreen" frameborder="0" width="950" height="800"></iframe></div>
 
@@ -21,11 +21,11 @@ Just too much information such as different sizes of square, lines connected bet
 
 ### 2. Data munging ###
 
-The website provides data [table](http://www.census.gov/dataviz/visualizations/045/508.php). Data munging was done in R and R code can be seen from [here]().
+The website provides data [table](http://www.census.gov/dataviz/visualizations/045/508.php). Data munging was done in R and R code can be seen from [here](https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/multibar.R).
 
 ### 3. First attempt with ggplot ###
 
-<a href="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/blogpost1_multibar.png"><img src="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/blogpost1_multibar.png" alt="Top Language Spoken Other Than English" width="500" height="300"></a>
+<a href="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/blogpost1_multibar.png"><img src="https://raw.githubusercontent.com/jiun0201/project/master/EDAV&VIZ/Blogpost/blogpost1_multibar.png" alt="Top Language Spoken Other Than English" width="800" height="600"></a>
 
 
 
