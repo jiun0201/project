@@ -177,14 +177,13 @@ library(maptools)
 summary(world)
 plot(world)
 
-library(rgdal)
-world.laea <- spTransform(world, CRS("+proj=laea +lat_0=0 +lon_0=0"))
-plot(world.laea)
+#library(rgdal)
+#world.laea <- spTransform(world, CRS("+proj=laea +lat_0=0 +lon_0=0"))
+#plot(world.laea)
 
-sp.IDs <- sapply(slot(world.laea, "polygons"), function(x) slot(x, "ID"))
-tail(sp.IDs)
+#sp.IDs <- sapply(slot(world.laea, "polygons"), function(x) slot(x, "ID"))
+#tail(sp.IDs)
 
-
-world.newrank <- SpatialPolygonsDataFrame(world,newrank)
-summary(states.sat)
+#world.newrank <- SpatialPolygonsDataFrame(world,newrank)
+#summary(states.sat)
 
