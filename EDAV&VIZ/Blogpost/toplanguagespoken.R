@@ -41,6 +41,17 @@ sort <- newdata[order(newdata$language),]
 
 class(sort$language)
 
+######ChangeinLine
+BarChartLang <- ggplot(data=sort, aes(x=time, y=numbers, color=language, 
+                                      group=language, fill=language)) + 
+  geom_bar(stat="identity", position=position_dodge()) + 
+  facet_wrap(~language, scales="free_y") + 
+  xlab("Years") + 
+  ylab("The total number (000') of each languages spoken in the US over time") + 
+  labs(title = "Top Languages Other than English Spoken in 1980-2010")
+BarChartLang
+
+
 gg <- ggplot(data = sort, aes(x=time, y=numbers))
 gg <- gg + geom_point(aes(color = time), size=3)
 # make strips by nosql db factor
@@ -63,22 +74,21 @@ gg
 # Bar graph
 sort$time <- as.factor(sort$time)
 
-bar <- ggplot(data=sort, aes(x=language, y=numbers, fill=time)) + geom_bar(stat="identity", position=position_dodge()) + xlab("Languages") + ylab("The total number (000') of each languages spoken in the US over time") + labs(title = "Top Languages Other than English Spoken in 1980-2010")
+bar <- ggplot(data=sort, aes(x=language, y=numbers, fill=time)) + 
+  geom_bar(stat="identity", position=position_dodge()) + xlab("Languages") + ylab("The total number (000') of each languages spoken in the US over time") + labs(title = "Top Languages Other than English Spoken in 1980-2010")
 bar
 
 exceptforspanishbar <- ggplot(data=sort[-c(53:56),], aes(x=language, y=numbers, fill=time)) + geom_bar(stat="identity", position=position_dodge()) + xlab("Languages") + ylab("The total number (000') of each languages spoken in the US over time") + labs(title = "Top Languages Other than English and Spanish Spoken in 1980-2010")
 exceptforspanishbar
 
-######ChangeinLine
-ChangeinLine <- ggplot(data=sort, aes(x=time, y=numbers, color=language, group=language)) + geom_line() + facet_wrap(~language, scales="free_y") + xlab("Years") + ylab("The total number (000') of each languages spoken in the US over time") + labs(title = "Top Languages Other than English Spoken in 1980-2010")
-ChangeinLine
+
 
 #reorder(g$y, sort$numbers)
 #g +  gap.plot(sort$language,sort$numbers,gap=c(10000, 20000),gap.axis="sort$numbers",bgcol="white",breakcol="black",brw=0.02)
 #axis.break(axis=2,breakpos=10000, bgcol="white",breakcol="black", style="zigzag", brw=0.02)
 #breakpos=NULL,pos=NA, ,style="slash",)
 
-
+dev.off()
 ggplot(data=sort, aes(x=time, y=numbers, fill=language)) + geom_bar(stat="identity", position=position_dodge())
 class(sort$time)
 
